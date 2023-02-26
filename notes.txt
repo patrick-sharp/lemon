@@ -1,0 +1,27 @@
+
+Notes
+
+QUESTIONS
+
+What is codesign?
+
+
+ANSWERS
+
+How do I make it so that my app doesn't show up in the dock (i.e. just a menu bar widget)?
+This assumes you have already made an appdelegate
+  1. In xcode, click on the project root in the dropdown
+     (you should see a new tab open in xcode that ends in .xcodeproj)
+  2. Click on the icon with the project's name under the "TARGETS" section
+     (There should also be another section called "PROJECT" above "TARGETS")
+  3. Under the "Custom macOS Application Target Properties" dropdown,
+     add a new item with the key "Application is agent (UIElement)".
+  4. Make the type a Boolean and the value "YES"
+  5. Build the project again and it should only appear in the status bar
+
+How to get basic menu bar app with shortcut to work
+  1. AppDelegate
+  2. @NSApplicationDelegateAdaptor(AppDelegate.self) with emptyview
+  3. some ContentView to render
+  4. set the "Application is agent (UIElement)" thing
+  5. 

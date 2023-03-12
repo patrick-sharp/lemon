@@ -1,17 +1,10 @@
-//
-//  ContentView.swift
-//  wm
-//
-//  Created by blorp on 2022-12-03.
-//
-
 import SwiftUI
 
 enum CountType: String, Codable, CaseIterable {
     case one = "One",
     two = "Two",
     three = "Three"
-    
+
     var type: String {
         switch self {
         case .one:
@@ -46,7 +39,7 @@ struct ContentView: View {
                 VStack {
                     ForEach(CountType.allCases, id: \.self) { item in
                         Button {
-                            
+
                         } label: {
                             Text(item.rawValue)
                                 .foregroundColor(item == count ? .red : Color.primary)

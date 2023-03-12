@@ -22,6 +22,6 @@ let package = Package(
             dependencies: ["MASShortcut"]),
         .testTarget(
             name: "lemon-wmTests",
-            dependencies: ["lemon-wm"]),
+            dependencies: ["lemon-wm"])
     ]
 )
